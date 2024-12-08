@@ -1,0 +1,211 @@
+{% extends 'NavBar/DeliveryNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Page</title>
+  <link rel="stylesheet" type="text/css"  href="{% static 'css/file123.css' %}">
+    <a href="{% url 'cart_page' %}">View Cart</a>
+</head>
+<body>
+  {% block body %}
+  <br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/pannerb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Panner Burger</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('panner-qty')">-</button>
+            <input type="text" id="panner-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('panner-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('Panner Burger', 500, 'panner-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br><br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/vegb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Veg Burger</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('veg-qty')">-</button>
+            <input type="text" id="veg-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('veg-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('Veg Burger', 500, 'Veg-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/chickenb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Burger</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('chicken-qty')">-</button>
+            <input type="text" id="chicken-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('chicken-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('chicken Burger', 500, 'chicken-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/pannermahb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Panner Maharaja</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('panner-qty')">-</button>
+<input type="text" id="panner-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('panner-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('Panner Maharaja', 500, 'panner-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/vegmahb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Veg Maharaja</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('vegmah-qty')">-</button>
+            <input type="text" id="vegmah-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('vegmah-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('Veg Maharaja', 500, 'vegmah-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+ <div class="card mb-3" style="max-width: 640px;">
+    <div class="row g-0">
+      <div class="col-md-4 center-img-container">
+        <br>
+        <img src="{% static 'images/chickenmahb.jpg' %}" class="img-fluid rounded-start center-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Maharaja</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('chickenmahb-qty')">-</button>
+            <input type="text" id="chickenmahb-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('chickenmahb-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('Chicken Maharaja', 500, 'panner-qty')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+   <div class="cart-container">
+    <h3>Cart</h3>
+    <div id="cart-items"></div>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+  </div>
+  <script>
+    let cart = [];
+
+    function increaseQuantity(id) {
+      const qtyInput = document.getElementById(id);
+      let qty = parseInt(qtyInput.value);
+      qtyInput.value = qty + 1;
+    }
+
+    function decreaseQuantity(id) {
+      const qtyInput = document.getElementById(id);
+      let qty = parseInt(qtyInput.value);
+      if (qty > 1) {
+        qtyInput.value = qty - 1;
+      }
+    }
+
+    function addToCart(productName, price, quantityId) {
+        const quantity = document.getElementById(quantityId).value;
+
+        fetch('/add_to_cart/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}',
+            },
+            body: JSON.stringify({
+                product_name: productName,
+                price: price,
+                quantity: quantity,
+            }),
+        }).then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert(data.message);
+            }
+        });
+    }
+
+
+
+    function updateCartUI() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+
+      // Clear cart items display
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+const cartItemDiv = document.createElement('div');
+        cartItemDiv.className = 'cart-item';
+        cartItemDiv.innerHTML = `
+          <span>${item.name} - ₹${item.price} x ${item.quantity}</span>
+          <span>₹${itemTotal}</span>
+        `;
+        cartItems.appendChild(cartItemDiv);
+      });
+
+      cartTotal.textContent = total;
+    }
+  </script>
+
+  {% endblock %}
+</body>
+</html>

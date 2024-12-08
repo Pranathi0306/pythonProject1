@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'NavBar/ProjectNavBar.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    {% block body %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/projectnavbar.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/bg1.png' %}" class="d-block mx-auto w-50" alt="Image">
+
+    </div>
+{% endblock %}
+</body>
+</html>

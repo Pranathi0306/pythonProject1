@@ -1,0 +1,56 @@
+/* Basic navbar styling */
+
+.navbar {
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* Adjust z-index if needed to ensure it's above other elements */
+}
+
+
+
+
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Search bar styling */
+.form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.form-control:focus {
+  border-color: white;
+}
+
+/* User menu dropdown (optional) */
+.dropdown-menu {
+  background-color: #333;
+  color: white;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

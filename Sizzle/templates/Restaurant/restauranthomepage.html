@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+{% extends 'NavBar/RestaurantNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+{% block body %}
+<div class="container mt-4">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/rrdurbar.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">RR Durbar</h5>
+                            <p class="card-text">Where Every Meal is a Royal Feast</p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="{% url 'customer:order' %}" class="btn btn-dark">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/manorama.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Manorama</h5>
+                            <p class="card-text">A Legend That Spells Class.<br>Where Elegance Meets Flavor.</p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="#" class="btn btn-light">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/barkaas.jpg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Barkaas</h5>
+                            <p class="card-text">Arrive Hungry, Leave Happy<br> It's Mandi Time</p>
+                            <a href="#" class="btn btn-dark">Dine In</a>
+                            <a href="#" class="btn btn-light">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/paradise.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Paradise</h5>
+                            <p class="card-text">A Taste of Paradise in Every Bite. <br> Savor the Flavors of Paradise</p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="#" class="btn btn-danger">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/royaln.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Nawab</h5>
+                            <p class="card-text">"Your Way, Right Away" <br> "Wake up with the King."</p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="#" class="btn btn-dark">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/andhra spice.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Andhra Spice</h5>
+                            <p class="card-text">Flavors of Andhra, Spice of Tradition.</p>
+                            <a href="#" class="btn btn-success">Dine In</a>
+                            <a href="#" class="btn btn-danger">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more cards below in the same row if needed -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/Dominos-Pizza.jpg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Dominos Pizza</h5>
+                            <p class="card-text">Hot, Fresh, Delicious Pizza Delivered Right to Your Door!</p>
+                            <a href="#" class="btn btn-danger">Dine In</a>
+                            <a href="#" class="btn btn-primary">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/Blind Chemistry.png' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Blind Chemistry</h5>
+                            <p class="card-text">"Chemistry in Every Cup, Magic in Every Sip."</p>
+                            <a href="#" class="btn btn-light">Dine In</a>
+                            <a href="#" class="btn btn-dark">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/Burger King.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger King</h5>
+                            <p class="card-text">"Your Way, Right Away"   <br> "Wake up with the King."</br></p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="#" class="btn btn-primary">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/kfc.jpg'' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">KFC</h5>
+                            <p class="card-text">It's Finger Licking Good.<br> There’s Fast Food, Then There’s KFC </br></p>
+                            <a href="#" class="btn btn-light">Dine In</a>
+                            <a href="#" class="btn btn-danger">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/macd.jpg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">MacDonald's</h5>
+                            <p class="card-text">It's a good time for the great taste of McDonald's</p>
+                            <a href="#" class="btn btn-warning">Dine In</a>
+                            <a href="#" class="btn btn-danger">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/subway.jpeg' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Subway</h5>
+                            <p class="card-text">Think Fresh. Eat Fresh   <br> Choose Well.</br></p>
+                            <a href="#" class="btn btn-success">Dine In</a>
+                            <a href="#" class="btn btn-warning">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/MOM.jpg'' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Makers Of Milkshakes</h5>
+                            <p class="card-text">When Life Gets Rough And Problematic , It's Best To Shake It.</br></p>
+                            <a href="#" class="btn btn-light">Dine In</a>
+                            <a href="#" class="btn btn-primary">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/frozen bottle.png' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Frozen Bottle</h5>
+                            <p class="card-text">Frozen Bottle - For Every Mood.</p>
+                            <a href="#" class="btn btn-dark">Dine In</a>
+                            <a href="#" class="btn btn-light">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4">
+            <div class="card mb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4 center-img-container">
+                        <img src="{% static 'images/thickshake factory.png' %}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Thick Shake Factory</h5>
+                            <p class="card-text">Shake It Your Way.  <br> Crunch Into Happiness With Every Sip.</br></p>
+                            <a href="#" class="btn btn-danger">Dine In</a>
+                            <a href="#" class="btn btn-light">Take Away</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of row -->
+</div> <!-- End of container -->
+{% endblock %}
+</body>
+</html>

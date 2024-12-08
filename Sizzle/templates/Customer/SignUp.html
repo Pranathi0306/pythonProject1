@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'NavBar/ProjectNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    {% block body %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/projectnavbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <h2><b> Sign Up </b></h2>
+
+        <form method="post" action="{% url 'customer:SignUpLogic' %}">
+            {% csrf_token %}
+            <div class="input-container">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" name="password1" placeholder="Confirm Password" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+         <p>Already have an account? <a href="{% url 'customer:SignInLogic' %}">Sign In</a></p>
+    </div>
+{% endblock %}
+</body>
+</html>

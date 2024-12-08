@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'Navbar/MainNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<h1 align='center'><b> WELCOME TO SIZZLE</b></h1>
+    <div class="container">
+      <img src="{% static 'images/siz2.jpg' %}" class="d-block mx-auto w-50" alt="Image">
+
+    </div>
+
+{% endblock %}
+</body>
+</html>

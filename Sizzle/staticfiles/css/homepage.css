@@ -1,0 +1,10 @@
+.container {
+  padding: 20px;
+}
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit:cover;
+}

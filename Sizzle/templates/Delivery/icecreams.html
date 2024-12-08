@@ -1,0 +1,310 @@
+{% extends 'NavBar/DeliveryNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Page</title>
+  <link rel="stylesheet" type="text/css"  href="{% static 'css/file123.css' %}">
+</head>
+<body>
+  {% block body %}
+  <br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+            <br>
+      <img src="{% static 'images/butterscotch.jpeg' %}" class="img-fluid rounded-start center-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Butterscotch</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+<br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/strawberry.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Strawberry</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/chocolate.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Chocolate</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/oreo.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Oreo</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/pineapple.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Pineapple</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/vanila.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Vanila</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+<input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/black carrent.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Black Current</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div><div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <br><br><br>
+<div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/mango.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Mango</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+         <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+  <div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+      <img src="{% static 'images/black forest.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Black Forest</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div><div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <div class="card mb-3" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4 center-img-container">
+      <br>
+<img src="{% static 'images/pista.jpeg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Pista</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="quantity-container">
+            <button class="quantity-button" onclick="decreaseQuantity('cheese-qty')">-</button>
+            <input type="text" id="cheese-qty" class="quantity-input" value="1" readonly>
+            <button class="quantity-button" onclick="increaseQuantity('cheese-qty')">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div><div class="empty-container-right">
+     <div class="price-container">
+    <label for="price-input">Price: </label>
+    <input type="text" id="price-input" class="price-input" value="₹500.00" readonly>
+  </div>
+   </div>
+  <script>
+    function increaseQuantity(id) {
+      const qtyInput = document.getElementById(id);
+      let qty = parseInt(qtyInput.value);
+      qtyInput.value = qty + 1;
+    }
+
+    function decreaseQuantity(id) {
+      const qtyInput = document.getElementById(id);
+      let qty = parseInt(qtyInput.value);
+      if (qty > 1) {
+        qtyInput.value = qty - 1;
+      }
+    }
+  </script>
+
+
+
+  {% endblock %}
+</body>
+
+
+
+</html>

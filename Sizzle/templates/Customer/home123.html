@@ -1,0 +1,278 @@
+{% extends 'NavBar/DeliveryNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/file123.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;  /* Set text color to white for better visibility */
+        }
+        .btn {
+            color: white; /* Ensure white text for buttons */
+        }
+    </style>
+    <title>Offer Card</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Card Container */
+        .offer-card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Background Image */
+        .offer-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('your-image-url.jpg'); /* Replace with your food image URL */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: 1;
+        }
+
+        /* Overlay for Dark Effect */
+        .offer-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Darken effect */
+            z-index: 2;
+        }
+
+        /* Content of the Card */
+        .card-content {
+            position: relative;
+            z-index: 3;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Food Item Title */
+        .food-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Description and Offer Details */
+        .food-description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Offer Price */
+        .offer-price {
+            font-size: 28px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Button */
+        .offer-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+.offer-button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+<div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center mt-lg-4">
+                <table class="table table-borderless text-center" style="width: 500px;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 300px; height: 200px; background-image: url('{% static 'images/piz.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTopizzaitems()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/icecreams.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectToicecreams()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/manchurian.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTomanchurian()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/northindian.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTonorthindian()>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Additional slides -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center mt-lg-4">
+                <table class="table table-borderless text-center" style="width: 500px;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/wraps.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTowraps()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/lollipop.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTostarters()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/burger.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectToburgers()>
+                                </button>
+                            </td>
+<td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/mocktails1.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTomocktails()>
+                                </button>
+                            </td>
+                            <td style="padding-right: 30px"></td>
+                            <td>
+                                <button class="btn btn-white rounded-circle fw-bold" style="width: 270px; height: 200px; background-image: url('{% static 'images/meals1.jpeg' %}'); background-repeat: no-repeat; background-position: center; background-size: contain;" onclick=redirectTosouthindian()>
+                                </button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev" style="background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; width: 10px; height: 10px; border: none;">
+    <span class="carousel-control-prev-icon" style="color: black; font-size: 70px;" aria-hidden="true">‹</span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next" style="background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; width: 10px; height: 10px; border: none;">
+    <span class="carousel-control-next-icon" style="color: black; font-size: 70px;" aria-hidden="true">›</span>
+    <span class="visually-hidden">Next</span>
+</button>
+
+</div>
+<br><br><br>
+<br><br><br>
+<link rel="stylesheet" href="{% static 'css/offer.css' %}">
+<div class="card-container" style="display: flex; gap: 16px; flex-wrap: wrap;">
+  <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+    <img src="{% static 'images/chillic.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+    function redirectTopizzaitems() {
+        window.location.href = "{% url 'delivery:pizzaitems' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectToicecreams() {
+        window.location.href = "{% url 'delivery:icecreams' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectTomanchurian() {
+        window.location.href = "{% url 'delivery:manchurian' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectTonorthindian() {
+        window.location.href = "{% url 'delivery:northindian' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectTowraps() {
+        window.location.href = "{% url 'delivery:wraps' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectTostarters() {
+        window.location.href = "{% url 'delivery:starters' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+    function redirectToburgers() {
+        window.location.href = "{% url 'delivery:burgers' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+     function redirectTomocktails() {
+        window.location.href = "{% url 'delivery:mocktails' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+     function redirectTosouthindian() {
+        window.location.href = "{% url 'delivery:southindian' %}"; // Replace "deliveryhomepage" with the actual URL of your delivery homepage
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

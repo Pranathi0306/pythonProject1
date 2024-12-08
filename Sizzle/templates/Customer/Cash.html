@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'NavBar/RestaurantNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<h5 align="center"> Order Confirmed!!</h5>
+<h3 align="center">Thanks for Choosing Sizzle!</h3>
+<center>
+          <a href="{% url 'customer:MainPage' %}">
+          <button type="button" class="btn btn-dark btn-lg btn-block">Go Back To Home Page</button>
+        </a>
+</center>
+{% endblock %}
+</body>
+</html>

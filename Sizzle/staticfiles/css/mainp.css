@@ -1,0 +1,19 @@
+/* Ensure the carousel fills the entire viewport */
+.carousel {
+  height: 100vh; /* 100% of the viewport height */
+  overflow: hidden; /* Hide any overflow to prevent scrolling */
+}
+
+/* Ensure images fit properly without stretching or distorting */
+.carousel-item img {
+  width: 100%;        /* Make the image width span the entire carousel */
+  height: 100%;       /* Ensure the image height covers the carousel */
+  object-fit: cover;  /* Scale the image, maintaining its aspect ratio while covering the container */
+}
+
+/* Adjust navigation button placement if necessary */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Rounded buttons */
+}

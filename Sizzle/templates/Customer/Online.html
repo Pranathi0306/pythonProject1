@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'NavBar/RestaurantNavBar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<img src="{% static 'images/R.jpeg' %}" class="img-fluid mx-auto d-block" alt="...">
+<center>
+          <a href="{% url 'customer:Cash' %}">
+          <button type="button" class="btn btn-dark btn-lg btn-block">Payment Completed</button>
+        </a>
+    <a href="{% url 'customer:order' %}">
+          <button type="button" class="btn btn-dark btn-lg btn-block">Go Back</button>
+        </a>
+</center>
+{% endblock %}
+</body>
+</html>
